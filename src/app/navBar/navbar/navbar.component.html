@@ -1,0 +1,62 @@
+<div class="container">
+  <div>
+    <div class="">
+      <button class="btn btn-link text-body link-hover text-decoration" (click)="a = 0; b = 0; c = 0; d = 0; f = 0">
+        <i class="fas fa-home"></i> Inicio
+      </button>
+      <button class="btn btn-link text-body link-hover text-decoration" (click)="b = 1; a = 1; c = 0; d = 0; f = 0">
+        <i class="fas fa-user-tie"></i> Gestión Accesos
+      </button>
+      <button class="btn btn-link text-body link-hover text-decoration" (click)="c = 1; b = 0; a = 1; d = 0; f = 0">
+        <i class="fas fa-paperclip"></i> Gestión SSGG
+      </button>
+      <button  class="btn btn-link text-body link-hover text-decoration" (click)="d = 1; b = 0; a = 1; c = 0; f = 0">
+        <i class="fas fa-hands-helping"></i> Acciones AM
+      </button>
+      <button class="btn btn-link text-body link-hover text-decoration" (click)="f = 1; d = 0; c = 0; b = 0; a = 1">
+        <i class="fas fa-address-card"></i> Acciones Cliente
+      </button>
+    </div>                                                                                                                                                                                                                                                                                               
+
+    <div class="border rounded mt-1 bg-custom" [hidden]="a">
+      <nav class="nav">
+        <a class="nav-link text-body link-hover" href="#"><small>Bienvenido a la Aplicación Gestión de Servicios Gestionados</small></a>
+      </nav>
+    </div>
+
+    <div class="border rounded mt-1 bg-custom" [hidden]="!b">
+      <nav>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Administrar usuarios</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Administrar clientes</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Administrar perfile</small>s</a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Administrar roles</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Administrar funciones</small></a>
+      </nav>
+    </div>
+
+    <div class="border rounded mt-1 bg-custom" [hidden]="!c">
+      <nav>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block active" href="#"><small>Definir líneas</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Definir servicios</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Definir recursos</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Definir parámetros</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Definir parámetros administrador</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Definir formulas</small></a>
+      </nav>
+    </div>
+
+    <div class="border rounded mt-1 bg-custom" [hidden]="!d">
+      <nav>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Nueva Oferta SSGG</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Listado de peticiones SSGG</small></a>
+      </nav>
+    </div>
+    
+    <div class="border rounded mt-1 bg-custom" [hidden]="!f">
+      <nav>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Petición Alta Cliente</small></a>
+        <a class="nav-link text-body link-hover d-block d-md-inline-block" href="#"><small>Nueva Petición SSGG</small></a>
+      </nav>
+    </div>
+  </div>
+</div>

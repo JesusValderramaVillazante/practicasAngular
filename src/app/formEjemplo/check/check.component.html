@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="mt-4 form-inline">
+  <div class="form-group mr-3" formArrayName="orders" *ngFor="let order of form.controls.orders.controls; let i = index">
+    <label [for]="'order' + i" class="pr-2"> {{orders[i].name}} </label>
+    <input type="checkbox" [id]="'order' + i" [formControlName]="i">
+  </div>
+  <div *ngIf="!form.valid">At least one order must be selected</div>
+  <br>
+  <button class="btn btn-primary">submit</button>
+</form>
+<br>
+<p>Resultado</p>
+<pre>
+{{formDatos}}
+</pre>

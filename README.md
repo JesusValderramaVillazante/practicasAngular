@@ -1,27 +1,9 @@
-# AngularRouterSample
+-   Crear un módulo de AppRouting en la carpeta/app que contiene la configuración de enrutamiento.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+```sh
+ng generate module app-routing --module app --flat
+ng generate module heroes/heroes --module app --flat --routing
+```
+El proceso de paramMap es un poco complicado. Cuando el mapa cambia, get() el parámetro de identificación de los parámetros cambiados.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+El operador switchMap cancela también peticiones anteriores durante el vuelo. Si el usuario se desplaza nuevamente a esta ruta con un nuevo id mientras que el HeroService todavía es recuperar el antiguo id, switchMap Descartes esa vieja petición y vuelve al héroe para el nuevo id.
