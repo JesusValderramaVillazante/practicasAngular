@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { HttpClientComponent } from './http-client/http-client.component';
+import { UserDetailComponent } from './http-client/user-detail/user-detail.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientComponent } from './http-client/http-client.component';
     AppComponent,
     PageNotFoundComponent,
     ComposeMessageComponent,
-    HttpClientComponent
+    HttpClientComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
