@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { ConfigServiceService } from './config/config-service.service';
 
 export interface Config {
@@ -35,6 +36,17 @@ export class HttpClientComponent implements OnInit {
     this.configService.getConfig()
       // clone the data object, using its known Config shape
       .subscribe((data: Config) => this.config = { ...data });
+=======
+
+@Component({
+  selector: 'app-http-client',
+  templateUrl: './http-client.component.html'
+})
+export class HttpClientComponent implements OnInit {
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> 8ad5c0ff4e4eb07dc4f73a8037b3a0c66c47c625
   }
 
   trackByFn(index: number, element: any) {
