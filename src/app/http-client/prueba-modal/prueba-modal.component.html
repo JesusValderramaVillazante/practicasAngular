@@ -1,0 +1,31 @@
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body"> 
+    <ngb-tabset>
+      <ngb-tab title="uno">
+        <ng-template ngbTabContent>
+          <app-prueba-template></app-prueba-template>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="dos">
+        <ng-template ngbTabContent>
+          <p>dos</p>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="tres">
+        <ng-template ngbTabContent>
+          <p>tres</p>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Save</button>
+  </div>
+</ng-template>
