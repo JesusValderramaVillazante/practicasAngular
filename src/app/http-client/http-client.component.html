@@ -2,6 +2,10 @@
   http-client works!
 </p>
 
+<h4>ejm modal</h4>
 <app-prueba-modal></app-prueba-modal>
 
-<fa name="cog" animation="spin"></fa>
+
+<h4>ejm trackBy</h4>
+<app-user-detail *ngFor="let user of users, trackBy: trackByFn" [user]="user"></app-user-detail>
+<button (click)="refresh()">Actualizar</button>

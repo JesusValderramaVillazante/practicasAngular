@@ -15,14 +15,10 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { HttpClientComponent } from './http-client/http-client.component';
-<<<<<<< HEAD
-import { UserDetailComponent } from './http-client/user-detail/user-detail.component';
-=======
 import { PruebaTemplateComponent } from './http-client/prueba-template/prueba-template.component';
 import { PruebaModalComponent } from './http-client/prueba-modal/prueba-modal.component';
->>>>>>> 8ad5c0ff4e4eb07dc4f73a8037b3a0c66c47c625
 
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { UserDetailComponent } from '../app/http-client/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,16 +26,12 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     PageNotFoundComponent,
     ComposeMessageComponent,
     HttpClientComponent,
-<<<<<<< HEAD
-    UserDetailComponent
-=======
+    UserDetailComponent,
     PruebaTemplateComponent,
     PruebaModalComponent
->>>>>>> 8ad5c0ff4e4eb07dc4f73a8037b3a0c66c47c625
   ],
   imports: [
     BrowserModule,
-    AngularFontAwesomeModule,
     FormEjemploModule,
     FormsModule,
     RxJsModule,
