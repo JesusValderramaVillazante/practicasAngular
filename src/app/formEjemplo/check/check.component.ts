@@ -15,8 +15,22 @@ export class CheckComponent implements OnInit {
     { id: 3, name: 'order 3' },
     { id: 4, name: 'order 4' }
   ];
-  constructor(private formBuilder: FormBuilder) {
-  }
+  //////////////////
+  countryForm: FormGroup;
+  countries = [{
+    id: '8f8c6e98',
+    name: 'USA'
+   },
+   {
+    id: '169fee1a',
+    name: 'Canada'
+   },
+   {
+    id: '3953154c',
+    name: 'UK'
+   }];
+  //////////////////
+  constructor(private formBuilder: FormBuilder) {}
 
   submit() {
     console.log('ok');
@@ -35,6 +49,36 @@ export class CheckComponent implements OnInit {
     });
 
     this.form.get('orders').get('1').setValue(false);
+
+    ////////////
+    this.countryForm = this.formBuilder.group({
+      countryControl: [this.countries[1]]
+    });
+
+    setTimeout(() => {
+      this.countries = [
+        {
+          id: '8f8c6e98',
+          name: 'USA',
+        },
+        {
+          id: '169fee1a',
+          name: 'Canada',
+        },
+        {
+          id: '3953154c',
+          name: 'UK'
+        },
+        {
+          id: '68c61e29',
+          name: 'otro valor'
+        }
+    ];
+    }, 10000);
+
   }
 
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
 }
