@@ -12,3 +12,14 @@
 <pre>
 {{formDatos}}
 </pre>
+
+<hr>
+
+<form [formGroup]="countryForm">
+<select formControlName="countryControl" [compareWith]="compareFn">
+  <option [ngValue]="country" *ngFor="let country of countries">
+    {{country.name}}
+  </option>
+</select>
+
+</form>
